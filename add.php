@@ -3,7 +3,7 @@
    	
    	$link=Connection();
 
-	$UserID=$_POST["Userid"];
+	$UserID=$_POST["UserID"];
 	$Location=$_POST["Location"];
 	$Wifi=$_POST["Wifi"];
 
