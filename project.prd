@@ -1,0 +1,12 @@
+[Options]
+LocalPath=C:\Users\Pow\gpsapp
+DialogFont=
+Highlight=0
+Sidebar.FileSplitter=0
+
+[Edit]
+Edge=0
+
+[Engine]
+code=PHP-cli
+

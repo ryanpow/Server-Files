@@ -9,7 +9,7 @@
 
 <html>
    <head>
-      <title>Data</title>
+      <title>Read GPSAccount</title>
    </head>
 <body>
    <h1>Watch</h1>
