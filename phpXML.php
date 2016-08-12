@@ -9,7 +9,7 @@ $result=$link->query("SELECT * FROM GPSAccount"); // change
 if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {		
-	echo "<user>\n
+	echo "<user>
 	<UserID>" . $row["UserID"]. "</UserID>
 	<Username>" . $row["Username"]. "</Username>
 	<Password>" . $row["Password"]. "</Password>
