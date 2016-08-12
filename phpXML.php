@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
 	<Location>" . $row["Location"]. "</Location>
 	<Wifi>" . $row["Wifi"]. "</Wifi>
 	</user>";
-	
+	}
 	} else {
 	    echo "0 results";
 	}
