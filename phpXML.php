@@ -7,8 +7,7 @@ $result=$link->query("SELECT * FROM GPSAccount"); // change
 echo "<GPSAccount>";
 if ($result->num_rows > 0) {
 	// output data of each row
-	while($row = $result->fetch_assoc()) {
-		
+	while($row = $result->fetch_assoc()) {		
 	echo "<user>\n
 	<UserID>" . $row["UserID"]. "</UserID>
 	<Username>" . $row["Username"]. "</Username>
