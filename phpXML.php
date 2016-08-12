@@ -1,9 +1,9 @@
 
 <?php
 header('Content-Type: text/xml');
-include("Arcman_connect.php"); 	// change
+include("connectdb.php"); 	// change
 $link=Connection();
-$result=$link->query("SELECT * FROM PeopleCount"); // change
+$result=$link->query("SELECT * FROM GPSAccount"); // change
 echo "<GPSAccount>";
 if ($result->num_rows > 0) {
 	// output data of each row
