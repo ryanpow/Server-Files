@@ -2,14 +2,14 @@
 <?php
 header('Content-Type: text/xml');
 include("connectdb.php"); 	// change
-echo "<GPSAccount>";
+$output="";
+$output+="<GPSAccount>";
 $link=Connection();
 $result=$link->query("SELECT * FROM GPSAccount"); // change
 
 if ($result->num_rows > 0) {
-	// output data of each row
 	while($row = $result->fetch_assoc()) {		
-	echo "<user>
+	$output+="<user>
 	<UserID>" . $row["UserID"]. "</UserID>
 	<Username>" . $row["Username"]. "</Username>
 	<Password>" . $row["Password"]. "</Password>
@@ -18,12 +18,13 @@ if ($result->num_rows > 0) {
 	</user>";
 	}
 	} else {
-	    echo "0 results";
+	    //echo "0 results";
 	}
 $link->close();
 
-echo "<GPSAccount>";
+$output+="<GPSAccount>";
 
+echo $output;
 
 ?>
 
