@@ -1,6 +1,5 @@
-
 <?php
-
+header('Content-type: text/xml');
 mysql_connect('127.11.44.2:3306', 'adminAXejd2g', 'QGBDCjp_R7s7');
 mysql_select_db('mysql');
 
@@ -42,7 +41,7 @@ while ($row = mysql_fetch_assoc($res)) {
 $xml->endElement();
 $xml->endElement();
 
-header('Content-type: text/xml');
+
 $xml->flush();
 
 
