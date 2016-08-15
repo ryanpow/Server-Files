@@ -1,30 +1,49 @@
 
 <?php
-header('Content-Type: text/xml');
-include("connectdb.php"); 	// change
-$output="";
-$output+="<GPSAccount>";
-$link=Connection();
-$result=$link->query("SELECT * FROM GPSAccount"); // change
 
-if ($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()) {		
-	$output+="<user>
-	<UserID>" . $row["UserID"]. "</UserID>
-	<Username>" . $row["Username"]. "</Username>
-	<Password>" . $row["Password"]. "</Password>
-	<Location>" . $row["Location"]. "</Location>
-	<Wifi>" . $row["Wifi"]. "</Wifi>
-	</user>";
-	}
-	} else {
-	    //echo "0 results";
-	}
-$link->close();
+mysql_connect('127.11.44.2:3306', 'adminAXejd2g', 'QGBDCjp_R7s7');
+mysql_select_db('mysql');
 
-$output+="<GPSAccount>";
+$sql = "SELECT * from GPSAccount";
+$res = mysql_query($sql);
 
-echo $output;
+$xml = new XMLWriter();
+
+$xml->openURI("php://output");
+$xml->startDocument();
+$xml->setIndent(true);
+$xml->startElement('GPSAccount');
+$xml->startElement('Users');
+
+while ($row = mysql_fetch_assoc($res)) {
+  	$xml->startElement("UserID");
+  	$xml->writeRaw($row['UserID']);
+	$xml->endElement();
+	
+	$xml->startElement("Username");
+  	$xml->writeRaw($row['Username']);
+	$xml->endElement();
+	
+	$xml->startElement("Password");
+	$xml->writeRaw($row['Password']);
+	$xml->endElement();
+	
+	$xml->startElement("Location");
+  	$xml->writeRaw($row['Location']);
+	$xml->endElement();
+	
+	$xml->startElement("Wifi");
+  	$xml->writeRaw($row['Wifi']);
+	$xml->endElement();
+
+  
+}
+
+$xml->endElement();
+$xml->endElement();
+
+header('Content-type: text/xml');
+$xml->flush();
+
 
 ?>
-
