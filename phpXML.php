@@ -9,7 +9,7 @@ $res = mysql_query($sql);
 
 $xml = new XMLWriter();
 
-$xml->openURI("php://output");
+$xml->openURI('php://output');
 $xml->startDocument();
 $xml->setIndent(true);
 $xml->startElement('GPSAccount');
