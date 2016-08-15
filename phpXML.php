@@ -12,9 +12,9 @@ $xml->openURI('php://output');
 $xml->startDocument();
 $xml->setIndent(true);
 $xml->startElement('GPSAccount');
-$xml->startElement('user');
 
 while ($row = mysql_fetch_assoc($res)) {
+$xml->startElement('user');
   	$xml->startElement("UserID");
   	$xml->writeRaw($row['UserID']);
 	$xml->endElement();
@@ -34,11 +34,10 @@ while ($row = mysql_fetch_assoc($res)) {
 	$xml->startElement("Wifi");
   	$xml->writeRaw($row['Wifi']);
 	$xml->endElement();
-
+$xml->endElement();
   
 }
 
-$xml->endElement();
 $xml->endElement();
 
 
