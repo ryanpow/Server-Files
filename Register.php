@@ -9,7 +9,7 @@
 	$LocationAdd=$_POST["Location"];
 	$WifiAdd=$_POST["Wifi"];
 	
-	$query = "insert into GPSAccount values('".UserIDAdd."','".UsernameAdd."','".PasswordAdd."','".LocationAdd."','".WifiAdd."')";
+	$query = "insert into GPSAccount values('".$UserIDAdd."','".$UsernameAdd."','".$PasswordAdd."','".$LocationAdd."','".$WifiAdd."')";
    	
    	if ($link->query($query) === TRUE) {
    	    echo "New record created successfully <br>";

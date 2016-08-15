@@ -7,7 +7,7 @@
 	$FriendList=$_POST["FriendList"];
 	
 	
-	$query = "insert into GPSFriend values('".UserID."','".FriendList."')";
+	$query = "insert into GPSFriend values('".$UserID."','".$FriendList."')";
    	
    	if ($link->query($query) === TRUE) {
    	    echo "New record created successfully <br>";
