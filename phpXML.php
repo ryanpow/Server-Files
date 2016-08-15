@@ -12,7 +12,7 @@ $xml->openURI('php://output');
 $xml->startDocument();
 $xml->setIndent(true);
 $xml->startElement('GPSAccount');
-$xml->startElement('Users');
+$xml->startElement('user');
 
 while ($row = mysql_fetch_assoc($res)) {
   	$xml->startElement("UserID");
