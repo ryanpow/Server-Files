@@ -12,19 +12,20 @@ Edge=0
 code=PHP-cli
 
 [History]
-Last=8
-1=C:\Users\Pow\gpsapp\FriendXML.php
-2=C:\Users\Pow\gpsapp\phpXML.php
-3=C:\Users\Pow\gpsapp\readDatabase.php
-4=C:\Users\Pow\gpsapp\AddCode.php
-5=C:\Users\Pow\gpsapp\Register.php
-6=C:\Users\Pow\gpsapp\ReadXML.php
-7=C:\Users\Pow\gpsapp\add.php
-8=C:\Users\Pow\gpsapp\connectdb.php
+Last=9
+1=C:\Users\Pow\gpsapp\DeleteList.php
+2=C:\Users\Pow\gpsapp\FriendXML.php
+3=C:\Users\Pow\gpsapp\phpXML.php
+4=C:\Users\Pow\gpsapp\readDatabase.php
+5=C:\Users\Pow\gpsapp\AddCode.php
+6=C:\Users\Pow\gpsapp\Register.php
+7=C:\Users\Pow\gpsapp\ReadXML.php
+8=C:\Users\Pow\gpsapp\add.php
+9=C:\Users\Pow\gpsapp\connectdb.php
 
 [Session]
-Active=4
-Last=8
+Active=8
+Last=9
 1=%LOCALPATH%\connectdb.php
 1.CX=1
 1.CY=2
@@ -46,8 +47,8 @@ Last=8
 4.LC=1
 4.TL=1
 5=%LOCALPATH%\AddCode.php
-5.CX=59
-5.CY=10
+5.CX=1
+5.CY=1
 5.LC=1
 5.TL=1
 6=%LOCALPATH%\readDatabase.php
@@ -65,6 +66,11 @@ Last=8
 8.CY=13
 8.LC=1
 8.TL=1
+9=%LOCALPATH%\DeleteList.php
+9.CX=4
+9.CY=10
+9.LC=1
+9.TL=1
 
 [Search]
 Last=-1
